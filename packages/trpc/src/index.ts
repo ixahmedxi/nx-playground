@@ -1,16 +1,7 @@
-import { initTRPC } from '@trpc/server';
-import superjson from 'superjson';
+import { appRouter } from './routers';
 
-const t = initTRPC.create({
-  transformer: superjson,
-});
+export { createContext } from './context';
+export { appRouter };
 
-export const appRouter = t.router({
-  hello: t.procedure.query(() => {
-    return {
-      message: 'Hello from tRPC!',
-    };
-  }),
-});
-
+// Needed to make the router type here otherwise vite compilation fails
 export type AppRouter = typeof appRouter;

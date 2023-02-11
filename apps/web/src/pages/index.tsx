@@ -12,8 +12,7 @@ const Home: NextPage = () => {
   if (status === 'authenticated') {
     return (
       <main>
-        <h1>Hello there, {session.user.name}</h1>
-        <HelloFromTRPC />
+        <HelloFromTRPC name={session.user.name || undefined} />
         <button type='button' onClick={() => void signOut()}>
           Sign out
         </button>
@@ -23,7 +22,6 @@ const Home: NextPage = () => {
 
   return (
     <main>
-      <h1>Home Page</h1>
       <HelloFromTRPC />
       <button type='button' onClick={() => void signIn('github')}>
         Sign in with Github
