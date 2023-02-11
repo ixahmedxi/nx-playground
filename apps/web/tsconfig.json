@@ -14,5 +14,5 @@
     "types": ["node", "vitest/globals"]
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
-  "exclude": ["node_modules", "src/**/*.spec.ts", "src/**/*.test.ts"]
+  "exclude": ["vite.config.ts", "node_modules", "src/**/*.spec.ts", "src/**/*.test.ts"]
 }
