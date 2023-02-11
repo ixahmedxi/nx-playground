@@ -43,3 +43,8 @@ Thumbs.db
 
 # Env variables
 .env
+.env.*
+!.env.example
+
+# Docker database files
+dbs

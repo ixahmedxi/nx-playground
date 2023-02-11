@@ -47,6 +47,12 @@ export default async function (tree: Tree, schema: Schema) {
   tree.rename(`${lib}/vite.config.md`, `${lib}/vite.config.ts`);
   tree.rename(`${lib}/src/index.md`, `${lib}/src/index.ts`);
   tree.rename(`${lib}/project.json.md`, `${lib}/project.json`);
+  tree.rename(`${lib}/tsconfig.eslint.json.md`, `${lib}/tsconfig.eslint.json`);
+  tree.rename(`${lib}/tsconfig.lib.json.md`, `${lib}/tsconfig.lib.json`);
+  tree.rename(`${lib}/tsconfig.spec.json.md`, `${lib}/tsconfig.spec.json`);
+  tree.rename(`${lib}/tsconfig.json.md`, `${lib}/tsconfig.json`);
+  tree.rename(`${lib}/.eslintrc.json.md`, `${lib}/.eslintrc.json`);
+  tree.rename(`${lib}/package.json.md`, `${lib}/package.json`);
   updateRootTsConfig(tree, schema);
   await formatFiles(tree);
   return () => {
