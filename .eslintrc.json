@@ -5,6 +5,12 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.base.json"
+      },
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
@@ -18,7 +24,8 @@
               }
             ]
           }
-        ]
+        ],
+        "@typescript-eslint/consistent-type-imports": "error"
       }
     },
     {

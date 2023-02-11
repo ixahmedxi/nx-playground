@@ -9,6 +9,9 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "parserOptions": {
+        "project": "apps/web/tsconfig.eslint.json"
+      },
       "rules": {
         "@next/next/no-html-link-for-pages": ["error", "apps/web/pages"]
       }
@@ -24,8 +27,5 @@
   ],
   "rules": {
     "@next/next/no-html-link-for-pages": "off"
-  },
-  "env": {
-    "jest": true
   }
 }
