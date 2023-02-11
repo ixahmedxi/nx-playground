@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { signIn, signOut, useSession } from 'next-auth/react';
+import { HelloFromTRPC } from '../components/HelloFromTRPC';
 
 const Home: NextPage = () => {
   const { data: session, status } = useSession();
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
     return (
       <main>
         <h1>Hello there, {session.user.name}</h1>
+        <HelloFromTRPC />
         <button type='button' onClick={() => void signOut()}>
           Sign out
         </button>
@@ -22,6 +24,7 @@ const Home: NextPage = () => {
   return (
     <main>
       <h1>Home Page</h1>
+      <HelloFromTRPC />
       <button type='button' onClick={() => void signIn('github')}>
         Sign in with Github
       </button>

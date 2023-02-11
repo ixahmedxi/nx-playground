@@ -18,7 +18,8 @@
     "baseUrl": ".",
     "paths": {
       "@acme/auth": ["packages/auth/src/index.ts"],
-      "@acme/db": ["packages/db/src/index.ts"]
+      "@acme/db": ["packages/db/src/index.ts"],
+      "@acme/trpc": ["packages/trpc/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
