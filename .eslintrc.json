@@ -30,6 +30,34 @@
       }
     },
     {
+      "files": [
+        "*.spec.ts",
+        "*.spec.tsx",
+        "*.spec.js",
+        "*.spec.jsx",
+        "*.test.ts",
+        "*.test.tsx",
+        "*.test.js",
+        "*.test.jsx",
+        "*.spec.mjs",
+        "*.test.mjs"
+      ],
+      "excludedFiles": ["apps/web-e2e/**/*"],
+      "extends": ["plugin:testing-library/react"],
+      "plugins": ["vitest"],
+      "rules": {
+        "vitest/consistent-test-it": "error",
+        "vitest/expect-expect": "error",
+        "vitest/max-nested-describe": "error",
+        "vitest/no-conditional-tests": "error",
+        "vitest/no-focused-tests": "error",
+        "vitest/no-identical-title": "error",
+        "vitest/no-skipped-tests": "error",
+        "vitest/prefer-lowercase-title": "error",
+        "vitest/prefer-to-be": "error"
+      }
+    },
+    {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nrwl/nx/typescript"],
       "rules": {}

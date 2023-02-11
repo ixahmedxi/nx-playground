@@ -13,7 +13,7 @@
         "project": "apps/web/tsconfig.eslint.json"
       },
       "rules": {
-        "@next/next/no-html-link-for-pages": ["error", "apps/web/pages"]
+        "@next/next/no-html-link-for-pages": ["error", "apps/web/src/pages"]
       }
     },
     {
