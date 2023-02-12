@@ -43,7 +43,7 @@
         "*.test.mjs"
       ],
       "excludedFiles": ["apps/web-e2e/**/*"],
-      "extends": ["plugin:testing-library/react"],
+      "extends": ["plugin:testing-library/react", "plugin:jest-dom/recommended"],
       "plugins": ["vitest"],
       "rules": {
         "vitest/consistent-test-it": "error",
@@ -53,8 +53,7 @@
         "vitest/no-focused-tests": "error",
         "vitest/no-identical-title": "error",
         "vitest/no-skipped-tests": "error",
-        "vitest/prefer-lowercase-title": "error",
-        "vitest/prefer-to-be": "error"
+        "vitest/prefer-lowercase-title": "error"
       }
     },
     {
